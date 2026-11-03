@@ -1,0 +1,28 @@
+{
+  "raw_total_records": 5574,
+  "duplicate_analysis": {
+    "distinct_duplicate_groups": 281,
+    "total_rows_in_duplicate_groups": 684,
+    "excess_duplicate_rows_removed": 403,
+    "conflicting_duplicate_messages": 0,
+    "explanation": "281 unique messages appear multiple times, totaling 684 rows. Keeping the first instance of each removes 403 redundant rows (684 - 281 = 403). No label conflicts exist among duplicates. Deduplication strictly precedes train-test splitting."
+  },
+  "unique_records_after_dedup": 5171,
+  "split_ratio": "80:20",
+  "train_set": {
+    "total": 4136,
+    "ham_count": 3614,
+    "ham_percentage": 87.38,
+    "spam_count": 522,
+    "spam_percentage": 12.62,
+    "file_path": "C:\\Users\\anish\\Downloads\\SMSANDSPAMDETECTION\\dataset\\train.csv"
+  },
+  "test_set": {
+    "total": 1035,
+    "ham_count": 904,
+    "ham_percentage": 87.34,
+    "spam_count": 131,
+    "spam_percentage": 12.66,
+    "file_path": "C:\\Users\\anish\\Downloads\\SMSANDSPAMDETECTION\\dataset\\test.csv"
+  }
+}

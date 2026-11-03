@@ -1,0 +1,128 @@
+{
+  "vectorizer_artifact_path": "C:\\Users\\anish\\Downloads\\SMSANDSPAMDETECTION\\models\\tfidf_vectorizer.pkl",
+  "max_features_configured": 4000,
+  "actual_vocabulary_size": 4000,
+  "ngram_range": [
+    1,
+    2
+  ],
+  "sublinear_tf": true,
+  "train_matrix_shape": [
+    4136,
+    4000
+  ],
+  "test_matrix_shape": [
+    1035,
+    4000
+  ],
+  "train_samples": 4136,
+  "test_samples": 1035,
+  "feature_count": 4000,
+  "compatibility": {
+    "LinearSVC": "Compatible (Sparse matrix, non-negative features)",
+    "MultinomialNB": "Compatible (Non-negative TF-IDF weights)",
+    "LogisticRegression": "Compatible (High-dimensional sparse input)"
+  },
+  "top_25_features": [
+    {
+      "feature": "get",
+      "mean_tfidf": 0.02193
+    },
+    {
+      "feature": "go",
+      "mean_tfidf": 0.01851
+    },
+    {
+      "feature": "not",
+      "mean_tfidf": 0.01696
+    },
+    {
+      "feature": "call",
+      "mean_tfidf": 0.0167
+    },
+    {
+      "feature": "number_token",
+      "mean_tfidf": 0.01529
+    },
+    {
+      "feature": "ok",
+      "mean_tfidf": 0.01448
+    },
+    {
+      "feature": "come",
+      "mean_tfidf": 0.01402
+    },
+    {
+      "feature": "no",
+      "mean_tfidf": 0.01376
+    },
+    {
+      "feature": "know",
+      "mean_tfidf": 0.01195
+    },
+    {
+      "feature": "gt",
+      "mean_tfidf": 0.01106
+    },
+    {
+      "feature": "lt",
+      "mean_tfidf": 0.01094
+    },
+    {
+      "feature": "like",
+      "mean_tfidf": 0.01078
+    },
+    {
+      "feature": "good",
+      "mean_tfidf": 0.01056
+    },
+    {
+      "feature": "ur",
+      "mean_tfidf": 0.0105
+    },
+    {
+      "feature": "think",
+      "mean_tfidf": 0.01031
+    },
+    {
+      "feature": "want",
+      "mean_tfidf": 0.01012
+    },
+    {
+      "feature": "time",
+      "mean_tfidf": 0.01011
+    },
+    {
+      "feature": "send",
+      "mean_tfidf": 0.01009
+    },
+    {
+      "feature": "lt gt",
+      "mean_tfidf": 0.01009
+    },
+    {
+      "feature": "tell",
+      "mean_tfidf": 0.00954
+    },
+    {
+      "feature": "see",
+      "mean_tfidf": 0.00921
+    },
+    {
+      "feature": "say",
+      "mean_tfidf": 0.00908
+    },
+    {
+      "feature": "home",
+      "mean_tfidf": 0.00898
+    },
+    {
+      "feature": "day",
+      "mean_tfidf": 0.00878
+    },
+    {
+      "feature": "still",
+      "mean_tfidf": 0.00849
+    }
+  ]
+}

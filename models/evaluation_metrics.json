@@ -1,0 +1,257 @@
+{
+  "methodology": {
+    "validation_strategy": "5-Fold Stratified Cross-Validation using atomic Scikit-learn Pipelines (zero validation-fold TF-IDF leakage)",
+    "training_samples": 4136,
+    "held_out_test_samples": 1035,
+    "champion_model": "Linear SVM (Balanced)",
+    "selection_rationale": "Linear SVM (Balanced) is selected as the primary champion model based strictly on 5-fold cross-validation using atomic Pipelines fitted independently within each fold (CV F1: 0.9505, CV Recall: 0.9387, CV Accuracy: 0.9877). Because this application acts as an advisory classification and inspection tool without automatic deletion, maximizing recall to detect scams and phishing messages while preserving high precision is the mathematically and operationally superior objective."
+  },
+  "cross_validation_results": {
+    "Linear SVM (Balanced)": {
+      "cv_accuracy_mean": 0.9877,
+      "cv_accuracy_std": 0.0039,
+      "cv_spam_precision_mean": 0.9631,
+      "cv_spam_precision_std": 0.0225,
+      "cv_spam_recall_mean": 0.9387,
+      "cv_spam_recall_std": 0.0179,
+      "cv_spam_f1_mean": 0.9505,
+      "cv_spam_f1_std": 0.0155
+    },
+    "Linear SVM (Default)": {
+      "cv_accuracy_mean": 0.9869,
+      "cv_accuracy_std": 0.0055,
+      "cv_spam_precision_mean": 0.9793,
+      "cv_spam_precision_std": 0.015,
+      "cv_spam_recall_mean": 0.9156,
+      "cv_spam_recall_std": 0.0342,
+      "cv_spam_f1_mean": 0.9462,
+      "cv_spam_f1_std": 0.0235
+    },
+    "Multinomial Naive Bayes": {
+      "cv_accuracy_mean": 0.9763,
+      "cv_accuracy_std": 0.0055,
+      "cv_spam_precision_mean": 0.9975,
+      "cv_spam_precision_std": 0.005,
+      "cv_spam_recall_mean": 0.8141,
+      "cv_spam_recall_std": 0.0418,
+      "cv_spam_f1_mean": 0.896,
+      "cv_spam_f1_std": 0.0264
+    },
+    "Logistic Regression": {
+      "cv_accuracy_mean": 0.9732,
+      "cv_accuracy_std": 0.0061,
+      "cv_spam_precision_mean": 0.9902,
+      "cv_spam_precision_std": 0.0089,
+      "cv_spam_recall_mean": 0.7949,
+      "cv_spam_recall_std": 0.0455,
+      "cv_spam_f1_mean": 0.8812,
+      "cv_spam_f1_std": 0.0305
+    }
+  },
+  "held_out_test_results": {
+    "Linear SVM (Balanced)": {
+      "model_name": "Linear SVM (Balanced)",
+      "training_time_sec": 0.1777,
+      "test_accuracy": 0.9923,
+      "test_spam_precision": 0.9843,
+      "test_spam_recall": 0.9542,
+      "test_spam_f1": 0.969,
+      "confusion_matrix": {
+        "tn": 902,
+        "fp": 2,
+        "fn": 6,
+        "tp": 125,
+        "matrix": [
+          [
+            902,
+            2
+          ],
+          [
+            6,
+            125
+          ]
+        ]
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9933920704845814,
+          "recall": 0.9977876106194691,
+          "f1-score": 0.9955849889624724,
+          "support": 904.0
+        },
+        "Spam": {
+          "precision": 0.984251968503937,
+          "recall": 0.9541984732824428,
+          "f1-score": 0.9689922480620154,
+          "support": 131.0
+        },
+        "accuracy": 0.9922705314009662,
+        "macro avg": {
+          "precision": 0.9888220194942592,
+          "recall": 0.9759930419509559,
+          "f1-score": 0.9822886185122439,
+          "support": 1035.0
+        },
+        "weighted avg": {
+          "precision": 0.9922352073353407,
+          "recall": 0.9922705314009662,
+          "f1-score": 0.9922191444620281,
+          "support": 1035.0
+        }
+      }
+    },
+    "Linear SVM (Default)": {
+      "model_name": "Linear SVM (Default)",
+      "training_time_sec": 0.1646,
+      "test_accuracy": 0.9903,
+      "test_spam_precision": 1.0,
+      "test_spam_recall": 0.9237,
+      "test_spam_f1": 0.9603,
+      "confusion_matrix": {
+        "tn": 904,
+        "fp": 0,
+        "fn": 10,
+        "tp": 121,
+        "matrix": [
+          [
+            904,
+            0
+          ],
+          [
+            10,
+            121
+          ]
+        ]
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9890590809628009,
+          "recall": 1.0,
+          "f1-score": 0.9944994499449945,
+          "support": 904.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.9236641221374046,
+          "f1-score": 0.9603174603174603,
+          "support": 131.0
+        },
+        "accuracy": 0.9903381642512077,
+        "macro avg": {
+          "precision": 0.9945295404814005,
+          "recall": 0.9618320610687023,
+          "f1-score": 0.9774084551312274,
+          "support": 1035.0
+        },
+        "weighted avg": {
+          "precision": 0.990443873613886,
+          "recall": 0.9903381642512077,
+          "f1-score": 0.9901730338665337,
+          "support": 1035.0
+        }
+      }
+    },
+    "Multinomial Naive Bayes": {
+      "model_name": "Multinomial Naive Bayes",
+      "training_time_sec": 0.1546,
+      "test_accuracy": 0.9778,
+      "test_spam_precision": 0.9909,
+      "test_spam_recall": 0.8321,
+      "test_spam_f1": 0.9046,
+      "confusion_matrix": {
+        "tn": 903,
+        "fp": 1,
+        "fn": 22,
+        "tp": 109,
+        "matrix": [
+          [
+            903,
+            1
+          ],
+          [
+            22,
+            109
+          ]
+        ]
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9762162162162162,
+          "recall": 0.9988938053097345,
+          "f1-score": 0.9874248223072717,
+          "support": 904.0
+        },
+        "Spam": {
+          "precision": 0.990909090909091,
+          "recall": 0.8320610687022901,
+          "f1-score": 0.9045643153526971,
+          "support": 131.0
+        },
+        "accuracy": 0.9777777777777777,
+        "macro avg": {
+          "precision": 0.9835626535626536,
+          "recall": 0.9154774370060124,
+          "f1-score": 0.9459945688299845,
+          "support": 1035.0
+        },
+        "weighted avg": {
+          "precision": 0.9780758940758941,
+          "recall": 0.9777777777777777,
+          "f1-score": 0.9769371639391081,
+          "support": 1035.0
+        }
+      }
+    },
+    "Logistic Regression": {
+      "model_name": "Logistic Regression",
+      "training_time_sec": 0.1926,
+      "test_accuracy": 0.9826,
+      "test_spam_precision": 1.0,
+      "test_spam_recall": 0.8626,
+      "test_spam_f1": 0.9262,
+      "confusion_matrix": {
+        "tn": 904,
+        "fp": 0,
+        "fn": 18,
+        "tp": 113,
+        "matrix": [
+          [
+            904,
+            0
+          ],
+          [
+            18,
+            113
+          ]
+        ]
+      },
+      "classification_report": {
+        "Ham": {
+          "precision": 0.9804772234273319,
+          "recall": 1.0,
+          "f1-score": 0.9901423877327492,
+          "support": 904.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.8625954198473282,
+          "f1-score": 0.9262295081967213,
+          "support": 131.0
+        },
+        "accuracy": 0.9826086956521739,
+        "macro avg": {
+          "precision": 0.9902386117136659,
+          "recall": 0.9312977099236641,
+          "f1-score": 0.9581859479647352,
+          "support": 1035.0
+        },
+        "weighted avg": {
+          "precision": 0.9829482222012639,
+          "recall": 0.9826086956521739,
+          "f1-score": 0.9820529314822954,
+          "support": 1035.0
+        }
+      }
+    }
+  }
+}

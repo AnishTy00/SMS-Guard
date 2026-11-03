@@ -1,0 +1,68 @@
+{
+  "dataset_name": "UCI SMS Spam Collection",
+  "dataset_source": "UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/228/sms+spam+collection)",
+  "total_records": 5574,
+  "duplicate_analysis": {
+    "duplicate_groups_count": 281,
+    "total_occurrences_in_duplicate_groups": 684,
+    "excess_duplicate_rows_removed": 403,
+    "duplicate_percentage_of_raw": 7.23,
+    "explanation": "281 distinct message texts appear more than once. Together, they account for 684 rows in the raw dataset. Deduplication keeps 1 copy of each of the 281 messages and removes the 403 redundant copies (684 - 281 = 403), yielding exactly 5,171 unique messages (5,574 - 403 = 5,171)."
+  },
+  "unique_records": 5171,
+  "missing_values": 0,
+  "empty_messages": 0,
+  "detected_labels": [
+    "ham",
+    "spam"
+  ],
+  "raw_class_distribution": {
+    "counts": {
+      "ham": 4827,
+      "spam": 747
+    },
+    "percentages": {
+      "ham": 86.6,
+      "spam": 13.4
+    }
+  },
+  "deduplicated_class_distribution": {
+    "counts": {
+      "ham": 4518,
+      "spam": 653
+    },
+    "percentages": {
+      "ham": 87.37,
+      "spam": 12.63
+    }
+  },
+  "character_length_stats": {
+    "ham": {
+      "min": 2,
+      "max": 910,
+      "mean": 71.47,
+      "median": 52.0
+    },
+    "spam": {
+      "min": 13,
+      "max": 223,
+      "mean": 138.68,
+      "median": 149.0
+    }
+  },
+  "word_count_stats": {
+    "ham": {
+      "min": 1,
+      "max": 171,
+      "mean": 14.3,
+      "median": 11.0
+    },
+    "spam": {
+      "min": 2,
+      "max": 35,
+      "mean": 23.91,
+      "median": 25.0
+    }
+  },
+  "scam_label_present": false
+}
